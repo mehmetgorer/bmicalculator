@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #808392;
+}
+
+/*=============
+===============
+Header Component*/
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #705d63;
+  box-shadow: rgba(130, 130, 175, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  z-index: 5;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.hover-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 0.3s;
+}
+
+.hover-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.brand {
+  font-size: 1.75rem;
+  color: #35034d;
+  margin: 1rem;
+}
+
+/*=============
+===============
+BMI Component*/
+
+main {
+  min-height: 80vh;
+  width: 65%;
+  background-color: #fff;
+  border-radius: 1rem;
+  margin: 5rem auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.bmi-form {
+  margin-top: 0.5%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5rem;
+  padding: 1em;
+}
+
+input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  width: 40%;
+  height: 2rem;
+  border-radius: 0.1rem;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  background-color: #5056a4;
+  background-image: linear-gradient(326deg, #5064a4 0%, #870a29 74%);
+  color: #fff;
+  width: 40%;
+  font-size: 1rem;
+  height: 2.5rem;
+  padding: 0.1rem;
+  border-radius: 2rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+}
+.text {
+  margin-left: 1rem;
+  width: 400px;
+  line-height: 1.5;
+  position: relative;
+}
+
+span {
+  color: red;
+  margin: 0.5rem;
+}
+
+.result {
+  width: 35%;
+  min-height: 15rem;
+  padding: 1rem;
+  margin-top: -15rem;
+  margin-left: 3rem;
+}
+section {
+  display: flex;
+}
+
+aside {
+  margin-left: 10%;
+  margin-top: 0;
+  background-color: #fff;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  height: 30%;
+  padding: 3%;
+}
+
+/***************
+***************
+About.js*/
+.about {
+  width: 50%;
+  margin: 5rem auto;
+}
+
+p {
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  border: 1px solid black;
+  border-radius: 1rem;
+  width: 80%;
+}
+
+/***************
+***************
+MediaQuery*/
+
+@media only screen and (max-width: 900px) {
+  main {
+    width: 70%;
+  }
+  .text {
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main {
+    width: 100%;
+  }
+  .status {
+    font-size: 15px;
+  }
+  .diet-list h3 {
+    font-size: 15px;
+  }
+  .diet-list p {
+    font-size: 15px;
+  }
+}
+
+/***************
+***************
+DietList.js*/
+
+article {
+  padding: 5px 15px;
+  background-color: #fff;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.diet-list {
+  margin: 2rem auto;
+}
+
+/***************
+***************
+Calculations.js - Table*/
+.calc-page {
+  margin-top: 5rem;
+}
+
+#records {
+  border-collapse: collapse;
+  width: 100%;
+}
+#records td,
+#records th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#records tr {
+  background-color: #f2f2f2;
+}
+#records tr:hover {
+  background-color: #ddd;
+}
+#records th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #1f2422;
+  color: white;
+}
+
+.btn-clear {
+  width: 9rem;
+  height: 3rem;
+  margin: 1rem;
+  margin-left: 50%;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
